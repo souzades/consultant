@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <title>Denise Souza | Consultoria em Análise de Dados</title>
+  <title>Denise Souza | Consultoria em análise de dados</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
@@ -76,7 +76,7 @@
       border-radius: 10px;
       outline: none;
       transition: background-color 0.3s ease;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.2rem;
       font-size: 1.1rem;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
@@ -86,13 +86,18 @@
     }
 
     .panel {
-      padding: 0 1.5rem 1rem;
-      display: none;
+      max-height: 0;
       overflow: hidden;
+      transition: max-height 0.4s ease;
       background-color: white;
+      padding: 0 1.5rem;
       border-radius: 0 0 10px 10px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
       font-size: 0.95rem;
+    }
+
+    .panel p {
+      margin: 1rem 0;
     }
 
     .contact {
@@ -176,7 +181,7 @@
   <section>
     <h2>Portfólio de serviços</h2>
 
-    <button class="accordion">Consultoria em análise quantitativa de dados</button>
+    <button class="accordion">Consultoria em análise de dados</button>
     <div class="panel">
       <p>
         Definição de estratégias de análises descritivas e inferenciais, modelagem por regressão, análise fatorial, machine learning e outros métodos para dados em saúde utilizando linguagem R. 
@@ -185,7 +190,7 @@
       </p>
     </div>
 
-    <button class="accordion">Mentoria Acadêmica</button>
+    <button class="accordion">Mentoria acadêmica</button>
     <div class="panel">
       <p>
         Acompanhamento para escrita científica, estruturação de projetos, artigos para publicação. 
@@ -193,19 +198,20 @@
       </p>
     </div>
 
-    <button class="accordion">Validação de Instrumentos Psicométricos</button>
+    <button class="accordion">Elaboração e análise de instrumentos psicométricos</button>
     <div class="panel">
       <p>
-        Estruturação de métodos para estudos de validade e fidedignidade de instrumentos psicométricos aplicados a contextos diversos. 
+        Estruturação de estudos de validade e fidedignidade de instrumentos psicométricos aplicados a contextos diversos.
       </p>
     </div>
 
-    <div class="contact">
-       <a class="email-button" href="mailto:souza.des@gmail.com">Enviar E-mail</a>
+     <div class="contact">
+    
+      <a class="email-button" href="mailto:souza.des@gmail.com">Enviar E-mail</a>
 
       <div class="social-links">
         <p>
-          <a href="http://lattes.cnpq.br/485917886261981" target="_blank">Lattes</a> |
+          <a href="http://lattes.cnpq.br/4859178862619817" target="_blank">Lattes</a> |
           <a href="https://scholar.google.com/citations?user=nf6DXDwAAAAJ&hl=pt-BR" target="_blank">Google Acadêmico</a> |
           <a href="https://www.researchgate.net/profile/Denise-Souza-9?ev=hdr_xprf" target="_blank">ResearchGate</a> |
           <a href="https://www.linkedin.com/in/denise-souza-24875027b/" target="_blank">LinkedIn</a>
@@ -218,14 +224,22 @@
 
   <script>
     const acc = document.getElementsByClassName("accordion");
+
     for (let i = 0; i < acc.length; i++) {
       acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        const panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-          panel.style.display = "none";
-        } else {
-          panel.style.display = "block";
+        const isActive = this.classList.contains("active");
+
+        // Fecha todos
+        for (let j = 0; j < acc.length; j++) {
+          acc[j].classList.remove("active");
+          acc[j].nextElementSibling.style.maxHeight = null;
+        }
+
+        // Abre apenas se não estava ativo
+        if (!isActive) {
+          this.classList.add("active");
+          const panel = this.nextElementSibling;
+          panel.style.maxHeight = panel.scrollHeight + "px";
         }
       });
     }
