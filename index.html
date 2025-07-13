@@ -2,15 +2,15 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <title>Denise Souza | Consultoria em Análise Quantitativa de Dados em Saúde</title>
+  <title>Denise Souza | Consultoria em análise de dados</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --primaria: #d95d7f;
-      --secundaria: #f8eef1;
-      --destaque: #f4c6d7;
-      --texto-escuro: #4a3c42;
+      --primaria: #e8a3b0;
+      --secundaria: #fdf7f9;
+      --destaque: #fce5ec;
+      --texto: #503742;
     }
 
     * {
@@ -22,11 +22,11 @@
     body {
       font-family: "Inter", sans-serif;
       background-color: var(--secundaria);
-      color: var(--texto-escuro);
+      color: var(--texto);
     }
 
     header {
-      background: linear-gradient(120deg, var(--primaria), #a33c5b);
+      background: linear-gradient(120deg, var(--primaria), #d58699);
       color: white;
       text-align: center;
       padding: 3rem 1rem 2rem;
@@ -101,15 +101,33 @@
     }
 
     .email-button:hover {
-      background-color: #a33c5b;
+      background-color: #d97d8d;
+    }
+
+    .social-links {
+      margin-top: 1.5rem;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      color: var(--texto);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      border-color: var(--primaria);
     }
 
     footer {
       text-align: center;
       padding: 1rem;
-      background-color: #f0d9e1;
+      background-color: #f6e9ee;
       font-size: 0.9rem;
-      color: var(--texto-escuro);
+      color: var(--texto);
       margin-top: 3rem;
     }
 
@@ -150,54 +168,53 @@
   <header>
     <h1>Denise Souza</h1>
     <p>Psicóloga | Mestre em Ciências</p>
-    <p>Consultoria em Análise Quantitativa de Dados em Saúde</p>
+    <p>Consultoria em análise quantitativa de dados em saúde</p>
     <img src="foto.jpg" alt="Foto de Denise Souza" />
   </header>
 
   <section>
-    <h2>Portfólio de Serviços</h2>
+    <h2>Portfólio de serviços</h2>
 
     <div class="portfolio-item">
-      <h3>Consultoria em Análise de Dados</h3>
+      <h3>Consultoria em análise de dados</h3>
       <p>
-        Definição de estratégias quantitativas, modelagem estatística e
-        interpretação de resultados para pesquisas em saúde.
+        Definição de estratégias quantitativas, modelagem e interpretação de resultados para pesquisas em saúde.
+        Suporte em análises descritivas e inferenciais, modelos de regressão, análise fatorial, machine learning e outros métodos de análises.
       </p>
     </div>
 
     <div class="portfolio-item">
-      <h3>Mentoria Acadêmica</h3>
+      <h3>Mentoria acadêmica</h3>
       <p>
-        Acompanhamento para escrita científica, projetos de pesquisa,
-        estruturação de artigos para publicação.
+        Acompanhamento para escrita científica, projetos de pesquisa, estruturação de artigos para publicação.
       </p>
     </div>
 
     <div class="portfolio-item">
-      <h3>Elaboração e Organização de Bases de Dados</h3>
+      <h3>Elaboração e organização de bases de dados</h3>
       <p>
-        Criação, tratamento e padronização de bancos de dados (Excel, R, Jamovi) e estruturação para análise.
+        Criação, tratamento, padronização de bancos de dados e estruturação para análises.
       </p>
     </div>
 
     <div class="portfolio-item">
-      <h3>Validação de Instrumentos Psicométricos</h3>
+      <h3>Análise de instrumentos psicométricos</h3>
       <p>
-        Estudos de validade e fidedignidade de instrumentos psicométricos aplicados em
-        contextos clínicos, educacionais e populacionais.
+        Estudos de validade e fidedignidade de instrumentos psicométricos aplicados em contextos clínicos, educacionais e populacionais.
       </p>
     </div>
 
-    <div class="portfolio-item">
-      <h3>Modelagem Estatística em Saúde</h3>
-      <p>
-        Execução e suporte em modelos de regressão, análise fatorial, machine learning e outros métodos estatísticos.
-      </p>
-    </div>
-
-    <div class="contact">
-      <h2>Contato</h2>
+      <div class="contact">
       <a class="email-button" href="mailto:souza.des@gmail.com">Enviar E-mail</a>
+
+      <div class="social-links">
+        <p>
+          <a href="http://lattes.cnpq.br/4859178862619817" target="_blank">Lattes</a> |
+          <a href="https://scholar.google.com/citations?user=nf6DXDwAAAAJ&hl=pt-BR" target="_blank">Google Acadêmico</a> |
+          <a href="https://www.researchgate.net/profile/Denise-Souza-9" target="_blank">ResearchGate</a> |
+          <a href="https://www.linkedin.com/in/denise-souza-24875027b/" target="_blank">LinkedIn</a>
+        </p>
+      </div>
     </div>
   </section>
 
