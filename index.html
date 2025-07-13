@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Denise Souza | Consultoria em Análise de Dados</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Denise Souza | Consultoria em Análise Quantitativa de Dados em Saúde</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --primaria: #00796b;
-      --secundaria: #f5f5f5;
-      --destaque: #c8e6c9;
+      --primaria: #d95d7f;
+      --secundaria: #f8eef1;
+      --destaque: #f4c6d7;
+      --texto-escuro: #4a3c42;
     }
 
     * {
@@ -19,13 +20,13 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       background-color: var(--secundaria);
-      color: #333;
+      color: var(--texto-escuro);
     }
 
     header {
-      background: linear-gradient(120deg, var(--primaria), #004d40);
+      background: linear-gradient(120deg, var(--primaria), #a33c5b);
       color: white;
       text-align: center;
       padding: 3rem 1rem 2rem;
@@ -38,7 +39,7 @@
       border-radius: 50%;
       margin-top: 1rem;
       border: 4px solid white;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
       transition: transform 0.3s ease;
     }
 
@@ -100,26 +101,38 @@
     }
 
     .email-button:hover {
-      background-color: #00695c;
+      background-color: #a33c5b;
     }
 
     footer {
       text-align: center;
       padding: 1rem;
-      background-color: #e0e0e0;
+      background-color: #f0d9e1;
       font-size: 0.9rem;
-      color: #666;
+      color: var(--texto-escuro);
       margin-top: 3rem;
     }
 
     @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(-20px);}
-      to {opacity: 1; transform: translateY(0);}
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @keyframes slideUp {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @media (max-width: 600px) {
@@ -134,52 +147,60 @@
   </style>
 </head>
 <body>
+  <header>
+    <h1>Denise Souza</h1>
+    <p>Psicóloga | Mestre em Ciências</p>
+    <p>Consultoria em Análise Quantitativa de Dados em Saúde</p>
+    <img src="foto.jpg" alt="Foto de Denise Souza" />
+  </header>
 
-<header>
-  <h1>Denise Souza</h1>
-  <p>Psicóloga | Mestre em Ciências</p>
-  <p>Consultoria em Análise Quantitativa de Dados em Saúde</p>
-  <img src="foto.jpg" alt="Foto de Denise Souza">
-</header>
+  <section>
+    <h2>Portfólio de Serviços</h2>
 
-<section>
-  <h2>Portfólio de Serviços</h2>
+    <div class="portfolio-item">
+      <h3>Consultoria em Análise de Dados</h3>
+      <p>
+        Definição de estratégias quantitativas, modelagem estatística e
+        interpretação de resultados para pesquisas em saúde.
+      </p>
+    </div>
 
-  <div class="portfolio-item">
-    <h3>Consultoria em Análise de Dados</h3>
-    <p>Definição de estratégias quantitativas, modelagem estatística e interpretação de resultados para pesquisas em saúde.</p>
-  </div>
+    <div class="portfolio-item">
+      <h3>Mentoria Acadêmica</h3>
+      <p>
+        Acompanhamento para escrita científica, projetos de pesquisa,
+        estruturação de artigos para publicação.
+      </p>
+    </div>
 
-  <div class="portfolio-item">
-    <h3>Mentoria Acadêmica</h3>
-    <p>Acompanhamento para escrita científica, projetos de pesquisa, estruturação de artigos, dissertações e teses.</p>
-  </div>
+    <div class="portfolio-item">
+      <h3>Elaboração e Organização de Bases de Dados</h3>
+      <p>
+        Criação, tratamento e padronização de bancos de dados (Excel, R, Jamovi) e estruturação para análise.
+      </p>
+    </div>
 
-  <div class="portfolio-item">
-    <h3>Elaboração e Organização de Bases de Dados</h3>
-    <p>Criação, tratamento e padronização de bancos (Excel, SPSS, R), com foco em qualidade e estruturação para análise.</p>
-  </div>
+    <div class="portfolio-item">
+      <h3>Validação de Instrumentos Psicométricos</h3>
+      <p>
+        Estudos de validade e fidedignidade de instrumentos psicométricos aplicados em
+        contextos clínicos, educacionais e populacionais.
+      </p>
+    </div>
 
-  <div class="portfolio-item">
-    <h3>Validação de Instrumentos Psicométricos</h3>
-    <p>Estudos de validade e fidedignidade de instrumentos aplicados em contextos clínicos, educacionais e populacionais.</p>
-  </div>
+    <div class="portfolio-item">
+      <h3>Modelagem Estatística em Saúde</h3>
+      <p>
+        Execução e suporte em modelos de regressão, análise fatorial, machine learning e outros métodos estatísticos.
+      </p>
+    </div>
 
-  <div class="portfolio-item">
-    <h3>Modelagem Estatística em Saúde</h3>
-    <p>Execução e suporte em modelos como regressão, árvore de decisão, análise fatorial e outros métodos estatísticos.</p>
-  </div>
+    <div class="contact">
+      <h2>Contato</h2>
+      <a class="email-button" href="mailto:souza.des@gmail.com">Enviar E-mail</a>
+    </div>
+  </section>
 
-  <div class="contact">
-    <h2>Contato</h2>
-    <p>Entre em contato para orçamentos ou dúvidas:</p>
-    <a class="email-button" href="mailto:souza.des@gmail.com">Enviar E-mail</a>
-  </div>
-</section>
-
-<footer>
-  © 2025 Denise Souza. Todos os direitos reservados.
-</footer>
-
+  <footer>© 2025 Denise Souza. Todos os direitos reservados.</footer>
 </body>
 </html>
