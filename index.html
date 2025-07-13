@@ -2,15 +2,15 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <title>Denise Souza | Consultoria em análise de dados</title>
+  <title>Denise Souza | Consultoria em Análise de Dados</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --primaria: #e8a3b0;
-      --secundaria: #fdf7f9;
-      --destaque: #fce5ec;
-      --texto: #503742;
+      --primaria: #c97a88;
+      --secundaria: #fcf8f9;
+      --destaque: #f3d8dd;
+      --texto: #3b2c30;
     }
 
     * {
@@ -26,7 +26,7 @@
     }
 
     header {
-      background: linear-gradient(120deg, var(--primaria), #d58699);
+      background: linear-gradient(120deg, var(--primaria), #a55e69);
       color: white;
       text-align: center;
       padding: 3rem 1rem 2rem;
@@ -58,30 +58,41 @@
       color: var(--primaria);
     }
 
-    p {
-      margin-bottom: 0.5rem;
-    }
-
     section {
       max-width: 900px;
       margin: 2rem auto;
       padding: 1rem;
     }
 
-    .portfolio-item {
+    .accordion {
       background-color: white;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
+      color: var(--texto);
+      cursor: pointer;
+      padding: 1rem 1.5rem;
+      width: 100%;
+      text-align: left;
+      border: none;
       border-left: 6px solid var(--primaria);
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, background-color 0.3s ease;
-      animation: slideUp 0.8s ease forwards;
+      outline: none;
+      transition: background-color 0.3s ease;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
 
-    .portfolio-item:hover {
-      transform: translateY(-5px);
+    .accordion:hover {
       background-color: var(--destaque);
+    }
+
+    .panel {
+      padding: 0 1.5rem 1rem;
+      display: none;
+      overflow: hidden;
+      background-color: white;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+      font-size: 0.95rem;
     }
 
     .contact {
@@ -101,7 +112,7 @@
     }
 
     .email-button:hover {
-      background-color: #d97d8d;
+      background-color: #a55e69;
     }
 
     .social-links {
@@ -125,7 +136,7 @@
     footer {
       text-align: center;
       padding: 1rem;
-      background-color: #f6e9ee;
+      background-color: #f3e3e6;
       font-size: 0.9rem;
       color: var(--texto);
       margin-top: 3rem;
@@ -135,17 +146,6 @@
       from {
         opacity: 0;
         transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
       }
       to {
         opacity: 1;
@@ -165,6 +165,7 @@
   </style>
 </head>
 <body>
+
   <header>
     <h1>Denise Souza</h1>
     <p>Psicóloga | Mestre em Ciências</p>
@@ -175,43 +176,38 @@
   <section>
     <h2>Portfólio de serviços</h2>
 
-    <div class="portfolio-item">
-      <h3>Consultoria em análise de dados</h3>
+    <button class="accordion">Consultoria em análise quantitativa de dados</button>
+    <div class="panel">
       <p>
-        Definição de estratégias quantitativas, modelagem e interpretação de resultados para pesquisas em saúde.
-        Suporte em análises descritivas e inferenciais, modelos de regressão, análise fatorial, machine learning e outros métodos de análises.
+        Definição de estratégias de análises descritivas e inferenciais, modelagem por regressão, análise fatorial, machine learning e outros métodos para dados em saúde utilizando linguagem R. 
+        Apoio na construção e organização de bases de dados. 
+        Interpretação, visualização e relato de resultados.
       </p>
     </div>
 
-    <div class="portfolio-item">
-      <h3>Mentoria acadêmica</h3>
+    <button class="accordion">Mentoria Acadêmica</button>
+    <div class="panel">
       <p>
-        Acompanhamento para escrita científica, projetos de pesquisa, estruturação de artigos para publicação.
+        Acompanhamento para escrita científica, estruturação de projetos, artigos para publicação. 
+        Orientação metodológica e revisão técnica.
       </p>
     </div>
 
-    <div class="portfolio-item">
-      <h3>Elaboração e organização de bases de dados</h3>
+    <button class="accordion">Validação de Instrumentos Psicométricos</button>
+    <div class="panel">
       <p>
-        Criação, tratamento, padronização de bancos de dados e estruturação para análises.
+        Estruturação de métodos para estudos de validade e fidedignidade de instrumentos psicométricos aplicados a contextos diversos. 
       </p>
     </div>
 
-    <div class="portfolio-item">
-      <h3>Análise de instrumentos psicométricos</h3>
-      <p>
-        Estudos de validade e fidedignidade de instrumentos psicométricos aplicados em contextos clínicos, educacionais e populacionais.
-      </p>
-    </div>
-
-      <div class="contact">
-      <a class="email-button" href="mailto:souza.des@gmail.com">Enviar E-mail</a>
+    <div class="contact">
+       <a class="email-button" href="mailto:souza.des@gmail.com">Enviar E-mail</a>
 
       <div class="social-links">
         <p>
-          <a href="http://lattes.cnpq.br/4859178862619817" target="_blank">Lattes</a> |
+          <a href="http://lattes.cnpq.br/485917886261981" target="_blank">Lattes</a> |
           <a href="https://scholar.google.com/citations?user=nf6DXDwAAAAJ&hl=pt-BR" target="_blank">Google Acadêmico</a> |
-          <a href="https://www.researchgate.net/profile/Denise-Souza-9" target="_blank">ResearchGate</a> |
+          <a href="https://www.researchgate.net/profile/Denise-Souza-9?ev=hdr_xprf" target="_blank">ResearchGate</a> |
           <a href="https://www.linkedin.com/in/denise-souza-24875027b/" target="_blank">LinkedIn</a>
         </p>
       </div>
@@ -219,5 +215,21 @@
   </section>
 
   <footer>© 2025 Denise Souza. Todos os direitos reservados.</footer>
+
+  <script>
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+
 </body>
 </html>
