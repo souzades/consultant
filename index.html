@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <title>Denise Souza | Consultoria em análise de dados</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
->
+  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
   <style>
     :root {
       --primaria: #c97a88;
@@ -108,7 +105,15 @@
       margin-top: 3rem;
     }
 
-    .email-button {
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .email-button, .whatsapp-button {
       background-color: var(--primaria);
       color: white;
       padding: 1rem 2rem;
@@ -117,14 +122,15 @@
       font-size: 1rem;
       text-decoration: none;
       transition: background-color 0.3s ease;
+      display: inline-block;
     }
 
-    .email-button:hover {
+    .email-button:hover, .whatsapp-button:hover {
       background-color: #a55e69;
     }
 
     .social-links {
-      margin-top: 1.5rem;
+      margin-top: 1rem;
     }
 
     .social-links a {
@@ -178,7 +184,6 @@
     <h1>Denise Souza</h1>
     <p>Psicóloga | Mestre em Ciências</p>
     <p>Consultoria em análise de dados</p>
-   
   </header>
 
   <section>
@@ -193,7 +198,7 @@
       </p>
     </div>
 
-        <button class="accordion">Elaboração e análise de instrumentos psicométricos</button>
+    <button class="accordion">Elaboração e análise de instrumentos psicométricos</button>
     <div class="panel">
       <p>
         Estruturação de estudos de validade e fidedignidade de instrumentos psicométricos aplicados a contextos diversos.
@@ -208,9 +213,11 @@
       </p>
     </div>
 
-     <div class="contact">
-    
-      <a class="email-button" href="mailto:souza.des@gmail.com">Enviar E-mail</a>
+    <div class="contact">
+      <div class="contact-buttons">
+        <a class="email-button" href="mailto:souza.des@gmail.com">E-mail</a>
+        <a class="whatsapp-button" href="https://wa.me/5531989235684" target="_blank">WhatsApp</a>
+      </div>
 
       <div class="social-links">
         <p>
@@ -232,13 +239,11 @@
       acc[i].addEventListener("click", function () {
         const isActive = this.classList.contains("active");
 
-        // Fecha todos
         for (let j = 0; j < acc.length; j++) {
           acc[j].classList.remove("active");
           acc[j].nextElementSibling.style.maxHeight = null;
         }
 
-        // Abre apenas se não estava ativo
         if (!isActive) {
           this.classList.add("active");
           const panel = this.nextElementSibling;
@@ -247,6 +252,4 @@
       });
     }
   </script>
-
 </body>
-</html>
