@@ -5,10 +5,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primaria: #c97a88;
-      --secundaria: #fcf8f9;
-      --destaque: #f3d8dd;
-      --texto: #3b2c30;
+      --verde-profissional: #8AA29E;      /* Verde suave e equilibrado */
+      --lavanda-claro: #C7B8E0;           /* Lavanda delicada e sofisticada */
+      --bege-neutro: #F5F1E6;             /* Bege claro, ótimo para fundo */
+      --cinza-claro: #E3E0DA;             /* Cinza de apoio */
+      --texto: #333333;                    /* Cor do texto */
     }
 
     * {
@@ -19,12 +20,12 @@
 
     body {
       font-family: "Inter", sans-serif;
-      background-color: var(--secundaria);
+      background-color: var(--bege-neutro);
       color: var(--texto);
     }
 
     header {
-      background: linear-gradient(120deg, var(--primaria), #a55e69);
+      background: linear-gradient(120deg, var(--lavanda-claro), var(--verde-profissional));
       color: white;
       text-align: center;
       padding: 3rem 1rem 2rem;
@@ -55,7 +56,7 @@
     h2 {
       font-size: 1.6rem;
       margin-bottom: 1rem;
-      color: var(--primaria);
+      color: var(--verde-profissional);
     }
 
     section {
@@ -65,14 +66,14 @@
     }
 
     .accordion {
-      background-color: white;
+      background-color: var(--bege-neutro);
       color: var(--texto);
       cursor: pointer;
       padding: 1rem 1.5rem;
       width: 100%;
       text-align: left;
       border: none;
-      border-left: 6px solid var(--primaria);
+      border-left: 6px solid var(--verde-profissional);
       border-radius: 10px;
       outline: none;
       transition: background-color 0.3s ease;
@@ -82,21 +83,21 @@
     }
 
     .accordion:hover {
-      background-color: var(--destaque);
+      background-color: var(--lavanda-claro);
     }
 
     .panel {
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.4s ease;
-      background-color: white;
+      background-color: var(--bege-neutro);
       padding: 0 1.5rem;
       border-radius: 0 0 10px 10px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
       font-size: 0.95rem;
     }
 
-    .panel p {
+    .panel p, .panel li {
       margin: 1rem 0;
     }
 
@@ -114,7 +115,7 @@
     }
 
     .email-button, .whatsapp-button {
-      background-color: var(--primaria);
+      background-color: var(--verde-profissional);
       color: white;
       padding: 1rem 2rem;
       border: none;
@@ -126,7 +127,7 @@
     }
 
     .email-button:hover, .whatsapp-button:hover {
-      background-color: #a55e69;
+      background-color: var(--lavanda-claro);
     }
 
     .social-links {
@@ -144,15 +145,15 @@
     }
 
     .social-links a:hover {
-      border-color: var(--primaria);
+      border-color: var(--verde-profissional);
     }
 
     footer {
       text-align: center;
       padding: 1rem;
-      background-color: #f3e3e6;
+      background-color: var(--bege-neutro);
       font-size: 0.9rem;
-      color: var(--texto);
+      color: var(--verde-profissional);
       margin-top: 3rem;
     }
 
@@ -178,78 +179,3 @@
     }
   </style>
 </head>
-<body>
-
-  <header>
-    <h1>Denise Souza</h1>
-    <p>Psicóloga | Mestre em Ciências</p>
-    <p>Consultoria em análise de dados</p>
-  </header>
-
-  <section>
-    <h2>Portfólio</h2>
-
-    <button class="accordion">Análise quantitativa de dados em saúde</button>
-    <div class="panel">
-  <ul>
-    <li>Estratégias de análises descritivas e inferenciais</li>
-    <li>Modelagem por regressão, análise fatorial, machine learning e outros métodos</li>
-    <li>Construção e organização de bases de dados</li>
-    <li>Interpretação, visualização e relato de resultados</li>
-  </ul>
-</div>
-
-<button class="accordion">Avaliação de instrumentos psicométricos</button>
-    <div class="panel">
-      <ul>
-         <li>Desenvolvimento e validação de instrumentos psicométricos aplicados a contextos diversos</li>
-     </ul>
-    </div>
-    
-<button class="accordion">Mentoria acadêmica</button>
-    <div class="panel">
-      <ul>
-         <li>Metodologia para projetos acadêmicos e artigos científicos</li>
-        <li>Escrita científica</li>
-     </ul>
-    </div>
-
-    <div class="contact">
-      <div class="contact-buttons">
-        <a class="email-button" href="mailto:souza.des@gmail.com">E-mail</a>
-      </div>
-
-      <div class="social-links">
-        <p>
-          <a href="http://lattes.cnpq.br/4859178862619817" target="_blank">CV Lattes</a> |
-          <a href="https://scholar.google.com/citations?user=nf6DXDwAAAAJ&hl=pt-BR" target="_blank">Google Scholar</a> |
-          <a href="https://www.researchgate.net/profile/Denise-Souza-9?ev=hdr_xprf" target="_blank">ResearchGate</a> |
-          <a href="https://www.linkedin.com/in/denise-souza-24875027b/" target="_blank">LinkedIn</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <footer>© 2025 Denise Souza. Todos os direitos reservados.</footer>
-
-  <script>
-    const acc = document.getElementsByClassName("accordion");
-
-    for (let i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
-        const isActive = this.classList.contains("active");
-
-        for (let j = 0; j < acc.length; j++) {
-          acc[j].classList.remove("active");
-          acc[j].nextElementSibling.style.maxHeight = null;
-        }
-
-        if (!isActive) {
-          this.classList.add("active");
-          const panel = this.nextElementSibling;
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-      });
-    }
-  </script>
-</body>
