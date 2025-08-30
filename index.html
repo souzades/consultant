@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <title>Denise Souza | Consultoria em análise de dados</title>
@@ -7,9 +10,9 @@
     :root {
       --verde-profissional: #8AA29E;      /* Verde suave e equilibrado */
       --lavanda-claro: #C7B8E0;           /* Lavanda delicada e sofisticada */
-      --bege-neutro: #F5F1E6;             /* Bege claro, ótimo para fundo */
+      --bege-neutro: #F5F1E6;             /* Bege claro para fundo */
       --cinza-claro: #E3E0DA;             /* Cinza de apoio */
-      --texto: #333333;                    /* Cor do texto */
+      --texto: #333333;                    /* Cor do texto principal */
     }
 
     * {
@@ -48,9 +51,14 @@
 
     header h1 {
       font-size: 3rem;
-      margin: 0;
       font-family: 'Allura', cursive;
+      margin: 0.5rem 0;
       letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin: 0.2rem 0;
     }
 
     h2 {
@@ -82,7 +90,8 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
 
-    .accordion:hover {
+    .accordion:hover,
+    .accordion.active {
       background-color: var(--lavanda-claro);
     }
 
@@ -97,7 +106,8 @@
       font-size: 0.95rem;
     }
 
-    .panel p, .panel li {
+    .panel p,
+    .panel li {
       margin: 1rem 0;
     }
 
@@ -114,7 +124,8 @@
       margin-bottom: 1.5rem;
     }
 
-    .email-button, .whatsapp-button {
+    .email-button,
+    .whatsapp-button {
       background-color: var(--verde-profissional);
       color: white;
       padding: 1rem 2rem;
@@ -126,8 +137,10 @@
       display: inline-block;
     }
 
-    .email-button:hover, .whatsapp-button:hover {
+    .email-button:hover,
+    .whatsapp-button:hover {
       background-color: var(--lavanda-claro);
+      color: white;
     }
 
     .social-links {
@@ -162,6 +175,7 @@
         opacity: 0;
         transform: translateY(-20px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -173,9 +187,88 @@
         width: 100px;
         height: 100px;
       }
+
       h1 {
         font-size: 1.5rem;
       }
     }
   </style>
 </head>
+
+<body>
+
+  <header>
+    <h1>Denise Souza</h1>
+    <p>Psicóloga | Mestre em Ciências</p>
+    <p>Consultoria em análise de dados</p>
+  </header>
+
+  <section>
+    <h2>Portfólio</h2>
+
+    <button class="accordion">Análise quantitativa de dados em saúde</button>
+    <div class="panel">
+      <ul>
+        <li>Estratégias de análises descritivas e inferenciais</li>
+        <li>Modelagem por regressão, análise fatorial, machine learning e outros métodos</li>
+        <li>Construção e organização de bases de dados</li>
+        <li>Interpretação, visualização e relato de resultados</li>
+      </ul>
+    </div>
+
+    <button class="accordion">Avaliação de instrumentos psicométricos</button>
+    <div class="panel">
+      <ul>
+        <li>Desenvolvimento e validação de instrumentos psicométricos aplicados a contextos diversos</li>
+      </ul>
+    </div>
+
+    <button class="accordion">Mentoria acadêmica</button>
+    <div class="panel">
+      <ul>
+        <li>Metodologia para projetos acadêmicos e artigos científicos</li>
+        <li>Escrita científica</li>
+      </ul>
+    </div>
+
+    <div class="contact">
+      <div class="contact-buttons">
+        <a class="email-button" href="mailto:souza.des@gmail.com">E-mail</a>
+      </div>
+
+      <div class="social-links">
+        <p>
+          <a href="http://lattes.cnpq.br/4859178862619817" target="_blank">CV Lattes</a> |
+          <a href="https://scholar.google.com/citations?user=nf6DXDwAAAAJ&hl=pt-BR" target="_blank">Google Scholar</a> |
+          <a href="https://www.researchgate.net/profile/Denise-Souza-9?ev=hdr_xprf" target="_blank">ResearchGate</a> |
+          <a href="https://www.linkedin.com/in/denise-souza-24875027b/" target="_blank">LinkedIn</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2025 Denise Souza. Todos os direitos reservados.</footer>
+
+  <script>
+    const acc = document.getElementsByClassName("accordion");
+
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        const isActive = this.classList.contains("active");
+
+        for (let j = 0; j < acc.length; j++) {
+          acc[j].classList.remove("active");
+          acc[j].nextElementSibling.style.maxHeight = null;
+        }
+
+        if (!isActive) {
+          this.classList.add("active");
+          const panel = this.nextElementSibling;
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
